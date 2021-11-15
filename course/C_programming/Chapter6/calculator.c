@@ -2,7 +2,7 @@
 int main()
 {
 	float a,b,c;
-	int n;
+	int opeation;
 	 printf("Please enter the a value:   ");
              if (scanf("%f", &a)!=1)
 	     {
@@ -11,8 +11,12 @@ int main()
 	     }
 
 	   printf("Please choose the operator:\n");
-           printf(" 1.addition\n 2.subtraction\n 3.multiplication\n 4.division\n 5.Modular Division\n");
-             scanf(" %d", &n);
+           printf(" 1.addition\n 2.subtraction\n 3.multiplication\n 4.division\n 5.Modular Division\n 6.Exit\n");
+             scanf(" %d", &opeation);
+
+	     if(opeation ==6)
+		     return 0;
+
 
 	  printf("Please enter the b value:  ");
           if (scanf("%f", &b)!=1)
@@ -22,30 +26,33 @@ int main()
            }
 
 
-	   switch(n)
+	   if (opeation==1)
            {
-             case 1 :
                  c = a + b;
-                     printf("The answer is:%f\n", c);
-             break ;
-
-             case 2 :
+                     printf("The answer is:%f\n %f+%f=%f"a,b,c);
+          }
+	else if(opeation==2)
+	{
                  c = a - b;
                      printf("The answer is:%f\n", c);
-             break;
-
-             case 3 :
+	}
+        else if(opeation==3)
+         {
                  c = a * b;
                      printf("The answer is:%f\n", c);
-             break;
-
-             case 4 :
+         }
+        else if(opeation==4)
+     {
                  c = a / b;
+     		 printf("The answer is:%f\n", c);
+	}
+           
+      else if(opeation==5)
+      {
+                 c =(int) a %(int) b;
                      printf("The answer is:%f\n", c);
-             break;
+         }
 
-
-             }
 }
 
 

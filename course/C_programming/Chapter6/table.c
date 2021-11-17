@@ -8,7 +8,7 @@ int main()
 	for (i=1;i<=20;i++)
 	{
 		res=i*num;
-	  printf(" %.1dx%.1d=%.1d\n",i,num,res);
+	  printf("%d*%d=%d\n",i,num,res);
 	/*printf("%d\n",res);*/
 	}
 }
